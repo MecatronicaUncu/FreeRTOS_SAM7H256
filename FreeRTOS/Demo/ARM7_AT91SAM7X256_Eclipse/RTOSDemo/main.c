@@ -99,6 +99,7 @@
 
 /* Scheduler includes. */
 #include "FreeRTOS.h"
+#include "Board.h"
 #include "task.h"
 
 /* Demo application includes. */
@@ -136,10 +137,38 @@ the stack usage to be greatly reduced. */
 static void prvSetupHardware( void );
 
 /*-----------------------------------------------------------*/
+/*
+ * Test Main
+ */
+int main(void){
+    volatile unsigned long ul; /* volatile so it is not optimized away. */
+	
+        /* Initialise the LED outputs - note that prvSetupHardware() might also 
+        have to be called! */
+        vParTestInitialise();
+
+        /* Toggle the LEDs repeatedly. */
+        for( ;; )
+        {
+            /* We don't want to use the RTOS features yet, so just use a very 
+            crude delay mechanism instead. */
+            for( ul = 0; ul < 0xfffff; ul++ )
+            {
+            }
+
+            /* Toggle the first four LEDs (on the assumption there are at least 
+            4 fitted. */
+            vParTestToggleLED(LED1);
+        }
+
+        return 0;
+}
+/*-----------------------------------------------------------*/
 
 /*
  * Starts all the other tasks, then starts the scheduler.
  */
+#if 0
 int main( void )
 {
 	/* Setup any hardware that has not already been configured by the low
@@ -173,6 +202,7 @@ int main( void )
 	/* We should never get here as control is now taken by the scheduler. */
   	return 0;
 }
+#endif
 /*-----------------------------------------------------------*/
 
 static void prvSetupHardware( void )
@@ -197,8 +227,10 @@ static void prvSetupHardware( void )
 }
 /*-----------------------------------------------------------*/
 
+
 void vApplicationTickHook( void )
 {
+	#if 0
 static unsigned long ulCallCount = 0, ulErrorFound = pdFALSE;
 
 /* The rate at which LED D4 will toggle if an error has been found in one or 
@@ -258,6 +290,7 @@ const unsigned long ulNoErrorCheckRate = 5000 / portTICK_PERIOD_MS;
 			vParTestToggleLED( mainERROR_LED );
 		}
 	}
+	#endif
 }
 
 

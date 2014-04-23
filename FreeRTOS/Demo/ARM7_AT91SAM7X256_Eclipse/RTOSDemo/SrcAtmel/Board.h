@@ -27,7 +27,7 @@
 //-----------------  
 //                                 PIO		PA    PB   PIN   
 #define LED1            (1<<8) // PA8		RD    PCK2  10   
-#define NB_LEB		1
+#define NB_LED		1
 
 #define LED_MASK        (LED1)
 

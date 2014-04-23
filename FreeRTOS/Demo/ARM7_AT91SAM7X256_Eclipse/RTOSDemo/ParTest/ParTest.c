@@ -65,6 +65,7 @@
 
 /* Scheduler includes. */
 #include "FreeRTOS.h"
+#include "Board.h"
 
 /* Demo application includes. */
 #include "partest.h"
