@@ -1,0 +1,4 @@
+Los jumpers de la plaqueta permiten elegir:
+*LED_E: permite la conexion del led a la pata STAT del uC
+*TST: pone al microprocesador en estado de test lo que permite programar el uC por USB con SAM-BA
+NOTA: no poner el controlador en estado de test, salvo si sabes lo que estas haciendo.
