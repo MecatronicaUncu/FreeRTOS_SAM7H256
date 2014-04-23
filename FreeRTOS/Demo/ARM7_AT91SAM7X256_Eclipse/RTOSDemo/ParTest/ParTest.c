@@ -74,9 +74,9 @@
  * or toggled.
  *-----------------------------------------------------------*/
 
-#define partstNUM_LEDS		( 4 )
-#define partstALL_LEDS		( ulLED_Mask[ 0 ] | ulLED_Mask[ 1 ] | ulLED_Mask[ 2 ] | ulLED_Mask[ 3 ] )
-const unsigned long 	ulLED_Mask[ partstNUM_LEDS ]= { (1<<19), (1<<20), (1<<21), (1<<22) };
+#define partstNUM_LEDS		( NB_LED )
+#define partstALL_LEDS		( ulLED_Mask[ 0 ] )
+const unsigned long 	ulLED_Mask[ partstNUM_LEDS ]= { LED1 };
 
 
 void vParTestInitialise( void )
