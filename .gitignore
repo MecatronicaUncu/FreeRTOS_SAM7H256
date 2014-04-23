@@ -1,0 +1,21 @@
+
+# Archivos resultantes de compilación
+*~
+*.o
+*.out
+*.bin
+*.lst 
+*.dmp
+*.map
+*.lst
+*.elf
+*.kate*
+*.dep
+*.hex
+
+# Archivos de Eclipse
+*.cproject
+*.project
+.metadata/
+.settings/
+
