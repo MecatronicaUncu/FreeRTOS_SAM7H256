@@ -81,7 +81,7 @@ const unsigned long 	ulLED_Mask[ partstNUM_LEDS ]= { LED1 };
 
 void vParTestInitialise( void )
 {	
-	/* Configure the PIO Lines corresponding to LED1 to LED4 to be outputs. */
+	/* Configure the PIO Lines corresponding to LED1 to be output. */
 	AT91C_BASE_PIOB->PIO_PER = partstALL_LEDS; 
 	AT91C_BASE_PIOB->PIO_OER = partstALL_LEDS; 
 
