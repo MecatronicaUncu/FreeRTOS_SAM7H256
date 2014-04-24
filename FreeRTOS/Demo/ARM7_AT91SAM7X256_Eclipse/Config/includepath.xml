@@ -1,88 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cdtprojectproperties>
 <section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+  
 <language name="holder for library settings">
-
 </language>
+
 <language name="Assembly">
-
-<includepath>/usr/lib/gcc/arm-none-eabi/4.8.2/include</includepath>
-<includepath>/usr/lib/gcc/arm-none-eabi/4.8.2/include-fixed</includepath>
+<includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include</includepath>
+<includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include-fixed</includepath>
 <includepath>/usr/arm-none-eabi/include</includepath>
-
-<!--
-<includepath workspace_path="true">/${ProjName}/include</includepath>
-<includepath workspace_path="true">/${ProjName}/os/kernel</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/utility</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/peripherals</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/boards/at91sam9261-ek</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/boards/at91sam9261-ek/at91sam9261</includepath>-->
-
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/include</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/portable/GCC/ARM7_AT91SAM7S</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/portable/GCC/ARM7_LPC23xx</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/portable/GCC/ARM_CM3</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/Common/include</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/Common/ethernet/uIP/uip-1.0/uip</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo/webserver</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo/SrcAtmel</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo/USB</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_LPC2368_Eclipse/RTOSDemo</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_LPC2368_Eclipse/RTOSDemo/webserver</includepath>
-
-<includepath workspace_path="true">/RTOSDemo/USB</includepath>
-<!--
-c:\devtools\yagarto\bin\../lib/gcc/arm-elf/4.2.1/include
-C:/devtools/yagarto/lib/gcc/arm-elf/4.2.1/include
-c:\devtools\yagarto\bin\../lib/gcc/arm-elf/4.1.1/include
-C:/devtools/yagarto/lib/gcc/arm-elf/4.1.1/include
-C:/devtools/yagarto/arm-elf/include-->
-
-
+<includepath workspace_path="false">../../../Source</includepath>
+<includepath workspace_path="false">../../../Demo</includepath>
 </language>
+
 <language name="GNU C++">
-
 </language>
+
 <language name="GNU C">
-<includepath>/usr/lib/gcc/arm-none-eabi/4.8.2/include</includepath>
-<includepath>/usr/lib/gcc/arm-none-eabi/4.8.2/include-fixed</includepath>
+<includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include</includepath>
+<includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include-fixed</includepath>
 <includepath>/usr/arm-none-eabi/include</includepath>
-
-<!--<includepath workspace_path="true">/${ProjName}/include</includepath>
-<includepath workspace_path="true">/${ProjName}/os/kernel</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/utility</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/peripherals</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/boards/at91sam9261-ek</includepath>
-<includepath workspace_path="true">/${ProjName}/os/drivers/at91lib/boards/at91sam9261-ek/at91sam9261</includepath>
--->
-
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/include</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/portable/GCC/ARM7_AT91SAM7S</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/portable/GCC/ARM7_LPC23xx</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Source/portable/GCC/ARM_CM3</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/Common/include</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/Common/ethernet/uIP/uip-1.0/uip</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo/webserver</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo/SrcAtmel</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_AT91SAM7X256_Eclipse/RTOSDemo/USB</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_LPC2368_Eclipse/RTOSDemo</includepath>
-<includepath workspace_path="false">/${FreeRTOS_ROOT}/Demo/ARM7_LPC2368_Eclipse/RTOSDemo/webserver</includepath>
-
-<includepath workspace_path="true">/RTOSDemo/USB</includepath>
-<!--
-c:\devtools\yagarto\bin\../lib/gcc/arm-elf/4.2.1/include
-C:/devtools/yagarto/lib/gcc/arm-elf/4.2.1/include
-c:\devtools\yagarto\bin\../lib/gcc/arm-elf/4.1.1/include
-C:/devtools/yagarto/lib/gcc/arm-elf/4.1.1/include
-C:/devtools/yagarto/arm-elf/include
--->
-
+<includepath workspace_path="false">../../../Source</includepath>
+<includepath workspace_path="false">../../../Demo</includepath>
 </language>
 </section>
 </cdtprojectproperties>
