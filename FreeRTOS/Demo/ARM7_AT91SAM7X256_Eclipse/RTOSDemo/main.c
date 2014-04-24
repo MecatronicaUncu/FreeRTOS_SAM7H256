@@ -125,7 +125,7 @@ the stack usage to be greatly reduced. */
 #define mainUIP_TASK_STACK_SIZE		( configMINIMAL_STACK_SIZE * 6 )
 
 /* The LED toggle by the tick hook should an error have been found in a task. */
-#define mainERROR_LED						( LED1 )
+#define mainERROR_LED						( 0 )
 
 /*-----------------------------------------------------------*/
 
@@ -158,7 +158,7 @@ int main(void){
 
             /* Toggle the first four LEDs (on the assumption there are at least 
             4 fitted. */
-            vParTestToggleLED(LED1);
+            vParTestToggleLED(0);
         }
 
         return 0;
