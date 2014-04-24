@@ -9,12 +9,10 @@
 <includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include</includepath>
 <includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include-fixed</includepath>
 <includepath>/usr/arm-none-eabi/include</includepath>
-<includepath workspace_path="false">../../../Source</includepath>
 <includepath workspace_path="false">../../../Source/include</includepath>
 <includepath workspace_path="false">../../../Source/portable/GCC/ARM7_AT91SAM7S</includepath>
-<includepath workspace_path="false">../../../Source/portable/MemMang</includepath>
-<includepath workspace_path="false">../../../Demo/Common/Minimal</includepath>
 <includepath workspace_path="false">../../../Demo/Common/include</includepath>
+<includepath workspace_path="true">/RTOSDemo</includepath>
 </language>
 
 <language name="GNU C++">
@@ -24,12 +22,10 @@
 <includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include</includepath>
 <includepath>/usr/lib/gcc/arm-none-eabi/4.9.0/include-fixed</includepath>
 <includepath>/usr/arm-none-eabi/include</includepath>
-<includepath workspace_path="false">../../../Source</includepath>
 <includepath workspace_path="false">../../../Source/include</includepath>
 <includepath workspace_path="false">../../../Source/portable/GCC/ARM7_AT91SAM7S</includepath>
-<includepath workspace_path="false">../../../Source/portable/MemMang</includepath>
-<includepath workspace_path="false">../../../Demo/Common/Minimal</includepath>
 <includepath workspace_path="false">../../../Demo/Common/include</includepath>
+<includepath workspace_path="true">/RTOSDemo</includepath>
 </language>
 </section>
 </cdtprojectproperties>
