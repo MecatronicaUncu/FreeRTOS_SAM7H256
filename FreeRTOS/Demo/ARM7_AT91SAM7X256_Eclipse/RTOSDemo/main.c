@@ -136,6 +136,7 @@ the stack usage to be greatly reduced. */
  */
 static void prvSetupHardware( void );
 
+#if 0
 /*-----------------------------------------------------------*/
 /*
  * Test Main
@@ -164,6 +165,32 @@ int main(void){
         return 0;
 }
 /*-----------------------------------------------------------*/
+#endif
+
+ int main( void )
+{
+	/* Setup the microcontroller hardware for the demo. */
+	prvSetupHardware();
+
+	/* Leave this function. */
+	vStartLEDFlashTasks(mainFLASH_PRIORITY); 
+
+	/* All other functions that create tasks are commented out.
+
+		vCreatePollQTasks();
+		vCreateComTestTasks();
+		Etc.
+
+		xTaskCreate( vCheckTask, "check", STACK_SIZE, NULL, TASK_PRIORITY, NULL );
+	*/
+
+	/*Start the RTOS scheduler. */
+	vTaskStartScheduler();
+
+	/* Should never get here! */
+	return 0;
+}
+    
 
 /*
  * Starts all the other tasks, then starts the scheduler.

@@ -147,11 +147,11 @@ unsigned portBASE_TYPE uxLED;
 	{
 		/* Delay for half the flash period then turn the LED on. */
 		vTaskDelayUntil( &xLastFlashTime, xFlashRate );
-		vParTestToggleLED( uxLED );
+		vParTestToggleLED( 0 );
 
 		/* Delay for half the flash period then turn the LED off. */
 		vTaskDelayUntil( &xLastFlashTime, xFlashRate );
-		vParTestToggleLED( uxLED );
+		vParTestToggleLED( 0 );
 	}
 } /*lint !e715 !e818 !e830 Function definition must be standard for task creation. */
 
