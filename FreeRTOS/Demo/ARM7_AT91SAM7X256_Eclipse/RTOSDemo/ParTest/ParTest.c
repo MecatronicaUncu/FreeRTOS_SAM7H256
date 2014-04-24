@@ -83,11 +83,11 @@ const unsigned long 	ulLED_Mask[ partstNUM_LEDS ]= { LED1 };
 void vParTestInitialise( void )
 {	
 	/* Configure the PIO Lines corresponding to LED1 to be output. */
-	AT91C_BASE_PIOB->PIO_PER = partstALL_LEDS; 
-	AT91C_BASE_PIOB->PIO_OER = partstALL_LEDS; 
+	AT91C_BASE_PIOA->PIO_PER = partstALL_LEDS; 
+	AT91C_BASE_PIOA->PIO_OER = partstALL_LEDS; 
 
 	/* Start with all LED's off. */
-    AT91C_BASE_PIOB->PIO_SODR = partstALL_LEDS;
+    AT91C_BASE_PIOA->PIO_SODR = partstALL_LEDS;
 }
 /*-----------------------------------------------------------*/
 
@@ -97,11 +97,11 @@ void vParTestSetLED( unsigned portBASE_TYPE uxLED, signed portBASE_TYPE xValue )
 	{
 		if( xValue )
 		{
-			AT91C_BASE_PIOB->PIO_SODR = ulLED_Mask[ uxLED ];
+			AT91C_BASE_PIOA->PIO_SODR = ulLED_Mask[ uxLED ];
 		}
 		else
 		{
-			AT91C_BASE_PIOB->PIO_CODR = ulLED_Mask[ uxLED ];
+			AT91C_BASE_PIOA->PIO_CODR = ulLED_Mask[ uxLED ];
 		}
 	}
 }
@@ -111,13 +111,13 @@ void vParTestToggleLED( unsigned portBASE_TYPE uxLED )
 {
 	if( uxLED < ( portBASE_TYPE ) partstNUM_LEDS )
 	{
-		if( AT91C_BASE_PIOB->PIO_PDSR & ulLED_Mask[ uxLED ] )
+		if( AT91C_BASE_PIOA->PIO_PDSR & ulLED_Mask[ uxLED ] )
 		{
-			AT91C_BASE_PIOB->PIO_CODR = ulLED_Mask[ uxLED ];
+			AT91C_BASE_PIOA->PIO_CODR = ulLED_Mask[ uxLED ];
 		}
 		else
 		{
-			AT91C_BASE_PIOB->PIO_SODR = ulLED_Mask[ uxLED ];
+			AT91C_BASE_PIOA->PIO_SODR = ulLED_Mask[ uxLED ];
 		}
 	}
 }
@@ -126,6 +126,6 @@ void vParTestToggleLED( unsigned portBASE_TYPE uxLED )
 unsigned portBASE_TYPE uxParTestGetLED( void )
 {
 	/* Return the value of LED DS4 for use by the WEB server. */
-	return !( AT91C_BASE_PIOB->PIO_PDSR & ulLED_Mask[ partstNUM_LEDS - 1 ] );
+	return !( AT91C_BASE_PIOA->PIO_PDSR & ulLED_Mask[ partstNUM_LEDS - 1 ] );
 }
 
