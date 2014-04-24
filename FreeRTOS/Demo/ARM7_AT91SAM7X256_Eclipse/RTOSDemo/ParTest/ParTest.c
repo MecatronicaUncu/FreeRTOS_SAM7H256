@@ -111,7 +111,7 @@ void vParTestToggleLED( unsigned portBASE_TYPE uxLED )
 {
 	if( uxLED < ( portBASE_TYPE ) partstNUM_LEDS )
 	{
-		if( AT91C_BASE_PIOA->PIO_PDSR & ulLED_Mask[ uxLED ] )
+		if( AT91C_BASE_PIOA->PIO_ODSR & ulLED_Mask[ uxLED ] )
 		{
 			AT91C_BASE_PIOA->PIO_CODR = ulLED_Mask[ uxLED ];
 		}
