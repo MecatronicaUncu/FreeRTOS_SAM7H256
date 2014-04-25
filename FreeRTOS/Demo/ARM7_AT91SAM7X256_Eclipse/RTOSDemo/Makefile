@@ -79,6 +79,7 @@ CFLAGS= $(DEBUG) \
 		-I $(UIP_COMMON_DIR) \
 		-I ./SrcAtmel \
 		-I ./USB \
+		-I ./TaskTest \
 		-D SAM7_GCC \
 		-D THUMB_INTERWORK \
 		-mcpu=arm7tdmi \
@@ -115,6 +116,7 @@ THUMB_SOURCE= \
 		$(RTOS_SOURCE_DIR)/portable/GCC/ARM7_AT91SAM7S/port.c \
 		$(RTOS_SOURCE_DIR)/portable/MemMang/heap_2.c \
 		./USB/USBSample.c \
+		./TaskTest/taskTest.c \
 		syscalls.c
 
 ARM_SOURCE= \

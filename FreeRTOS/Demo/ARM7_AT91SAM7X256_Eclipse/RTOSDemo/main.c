@@ -116,6 +116,7 @@
 #define mainUIP_PRIORITY					( tskIDLE_PRIORITY + 2 )
 #define mainUSB_PRIORITY					( tskIDLE_PRIORITY + 2 )
 #define mainBLOCK_Q_PRIORITY				( tskIDLE_PRIORITY + 1 )
+#define mainTEST_PRIORITY					( tskIDLE_PRIORITY + 3 )
 #define mainFLASH_PRIORITY                  ( tskIDLE_PRIORITY + 2 )
 #define mainGEN_QUEUE_TASK_PRIORITY			( tskIDLE_PRIORITY ) 
 
@@ -175,6 +176,7 @@ int main(void){
 	/* Leave this function. */
 	vStartLEDFlashTasks(mainFLASH_PRIORITY); 
 
+	vStartTaskTest(mainTEST_PRIORITY);
 	/* All other functions that create tasks are commented out.
 
 		vCreatePollQTasks();
