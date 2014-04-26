@@ -49,10 +49,16 @@ En caso de una compilación correcta, se obtiene un mensaje similar al siguiente
 
 De obtenerse un mensaje de error, debe verificarse la correcta instalación de arm-none-eabi.
 
+## Configuración Udev
+Debido a que el programador se conecta por USB, debemos habilitar la regla Udev correspondiente en Linux.
+Puede utilizarse el comando siguiente como root:
+
+    echo 'SUBSYSTEMS=="usb", ATTRS{idVendor}=="15ba", ATTRS{idProduct}=="0004", MODE="0666"' > /etc/udev/rules.d/99-olimex-arm.rules
+
 ## Flasheado
 
 De obtener una compilación exitosa, puede flashearse el binario obtenido en la tarjeta de desarrollo.
-Primero, nos al programador mediante OpenOCD
+Primero, nos conectamos al programador mediante OpenOCD
 
     cd OpenOCD
     openocd -f SAM7_JTAG_TINY.cfg
