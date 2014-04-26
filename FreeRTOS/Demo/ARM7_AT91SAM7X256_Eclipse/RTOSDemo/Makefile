@@ -150,10 +150,3 @@ clean :
 	touch Makefile
 	rm RTOSDemo.elf
 	rm RTOSDemo.hex
-	
-	
-	
-
-
-
-
